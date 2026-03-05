@@ -10,6 +10,14 @@
   --shadow: 0 10px 30px rgba(44, 36, 22, 0.05);
 }
 
+
+/* Reset */
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   background-color: var(--bg);
