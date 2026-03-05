@@ -49,3 +49,24 @@ h1 {
 }
 
 
+/* INPUT AREA */
+.input-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+input {
+  border: 1px solid transparent;
+  background: var(--bg);
+  padding: 12px;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  transition: 0.2s;
+}
