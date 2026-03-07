@@ -10,7 +10,6 @@
   --shadow: 0 10px 30px rgba(44, 36, 22, 0.05);
 }
 
-
 /* Reset */
 *, *::before, *::after { 
     box-sizing: border-box; 
@@ -47,7 +46,6 @@ h1 {
     color: var(--muted); 
     font-size: 1rem; 
 }
-
 
 /* INPUT AREA */
 .input-card {
@@ -113,7 +111,18 @@ input:focus {
     color: var(--text);
 }
 
-/* TODO LIST WRAPPER */
-.todo-list-wrapper {
-    min-height: 100px;
+/* TODO ITEMS - NEW IN DAY 3 */
+.todo-row {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+
 }
