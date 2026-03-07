@@ -7,3 +7,8 @@ let todoList = [
 document.addEventListener('DOMContentLoaded', () => {
     renderTodoList();
 });
+
+function renderTodoList() {
+  const container = document.querySelector('.js-todo-list');
+  
+  let todoListHTML = '';
