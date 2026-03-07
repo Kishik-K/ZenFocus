@@ -124,5 +124,30 @@ input:focus {
   transition: all 0.3s ease;
 }
 
-
+.checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
 }
+
+.todo-info { 
+    flex: 1; 
+}
+
+.todo-name { 
+    font-weight: 600; 
+    display: block; 
+}
+
+.todo-date { 
+    font-size: 0.75rem; 
+    color: var(--muted); 
+}
+
+
