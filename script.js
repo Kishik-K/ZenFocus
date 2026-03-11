@@ -101,5 +101,11 @@ function setDefaultDate() {
   if (dateInput) {
     dateInput.value = getTodayDate();
   }
-};
+}
 
+/**
+ * Event Listeners
+ */
+document.querySelector('.js-input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') addTodo();
+});
