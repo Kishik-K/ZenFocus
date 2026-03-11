@@ -34,3 +34,22 @@ todoList.forEach((todo, index) => {
 
   container.innerHTML = todoListHTML;
 }
+
+/**
+ * Adds a new task to the list
+ */
+function addTodo() {
+  const inputElement = document.querySelector('.js-input');
+  const dateInputElement = document.querySelector('.js-date-input');
+  const errorEl = document.querySelector('.js-error');
+
+  const name = inputElement.value.trim();
+  const dueDate = dateInputElement.value;
+
+  if (!name) {
+    errorEl.style.display = 'block';
+    inputElement.focus();
+    return;
+  }
+
+
