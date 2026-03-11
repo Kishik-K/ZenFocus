@@ -161,3 +161,12 @@ input:focus {
 
 .delete-btn:hover {
     opacity: 1;
+}
+
+/* ERROR - NEW IN DAY 4 */
+.error-msg { 
+    color: var(--accent); 
+    font-size: 0.8rem; 
+    display: none; 
+    margin-bottom: 10px; 
+}
