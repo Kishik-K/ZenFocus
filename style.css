@@ -170,3 +170,10 @@ input:focus {
     display: none; 
     margin-bottom: 10px; 
 }
+
+/* COMPLETED STATE - NEW IN DAY 5 */
+.todo-row.completed {
+    opacity: 0.6;
+    background: transparent;
+}
+
