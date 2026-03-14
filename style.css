@@ -177,3 +177,8 @@ input:focus {
     background: transparent;
 }
 
+.todo-row.completed .todo-name {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
