@@ -73,3 +73,6 @@ function setDefaultDate() {
   }
 }
 
+document.querySelector('.js-input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') addTodo();
+});
