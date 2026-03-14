@@ -66,3 +66,10 @@ function getTodayDate() {
     return `${year}-${month}-${day}`;
 }
 
+function setDefaultDate() {
+  const dateInput = document.querySelector('.js-date-input');
+  if (dateInput) {
+    dateInput.value = getTodayDate();
+  }
+}
+
