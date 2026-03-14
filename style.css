@@ -182,3 +182,9 @@ input:focus {
     color: var(--muted);
 }
 
+.todo-row.completed .checkbox {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+
