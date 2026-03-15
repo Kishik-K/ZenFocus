@@ -200,7 +200,7 @@ input:focus {
     border: none;
     color: #e57373;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .todo-row:hover .delete-btn { 
