@@ -202,3 +202,7 @@ input:focus {
     cursor: pointer;
     transition: 0.2s;
 }
+
+.todo-row:hover .delete-btn { 
+    opacity: 1;  /* Show on hover */
+}
