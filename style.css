@@ -192,3 +192,13 @@ input:focus {
     color: white;
     font-size: 14px;
 }
+
+/* DELETE BUTTON - UPDATED IN DAY 6 */
+.delete-btn {
+    opacity: 0;  /* Hidden by default */
+    background: none;
+    border: none;
+    color: #e57373;
+    cursor: pointer;
+    transition: 0.2s;
+}
