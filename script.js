@@ -1,4 +1,9 @@
-let todoList = [
+/**
+ * TO-DO LIST - Day 7: LocalStorage Persistence
+ */
+
+// Load from localStorage or use defaults
+let todoList = JSON.parse(localStorage.getItem('todos')) || [
   { name: 'Welcome to ZenFocus!', dueDate: getTodayDate(), completed: false },
   { name: 'Check off this task', dueDate: getTodayDate(), completed: true }
 ];
@@ -29,6 +34,7 @@ function renderTodoList() {
     `;
   });
   container.innerHTML = todoListHTML;
+  saveTodos();  // NEW: Save after every render
 }
 
 function addTodo() {
@@ -55,9 +61,6 @@ function toggleTodo(index) {
     renderTodoList();
 }
 
-/**
- * NEW: Delete a specific task
- */
 function deleteTodo(index) {
     todoList.splice(index, 1);
     renderTodoList();
@@ -76,6 +79,13 @@ function setDefaultDate() {
   if (dateInput) {
     dateInput.value = getTodayDate();
   }
+}
+
+/**
+ * NEW: Save to localStorage
+ */
+function saveTodos() {
+  localStorage.setItem('todos', JSON.stringify(todoList));
 }
 
 document.querySelector('.js-input').addEventListener('keydown', (e) => {
