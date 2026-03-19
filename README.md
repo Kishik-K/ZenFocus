@@ -2,7 +2,8 @@
 
 A minimalist to-do list application built with vanilla JavaScript.
 
-##Day 7 Key Changes:
+## Day 7 Key Changes:
+
 ✅ Data persists across browser sessions
 
 ✅ Load from localStorage on startup
