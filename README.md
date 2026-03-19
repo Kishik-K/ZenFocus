@@ -2,4 +2,10 @@
 
 A minimalist to-do list application built with vanilla JavaScript.
 
-## Day 6 - Delete Task Functionalit
+##Day 7 Key Changes:
+
+
+✅ Data persists across browser sessions
+✅ Load from localStorage on startup
+✅ Save after every modification
+✅ No more data loss!
