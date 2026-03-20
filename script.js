@@ -16,6 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderTodoList() {
   const container = document.querySelector('.js-todo-list');
   let todoListHTML = '';
+
+  function renderTodoList() {
+  const container = document.querySelector('.js-todo-list');
+  
+  // NEW: Calculate Progress
+  const totalTasks = todoList.length;
+  const completedTasks = todoList.filter(t => t.completed).length;
+  const percent = totalTasks === 0 ? 0 : Math.round((completedTasks / totalTasks) * 100);
+  
+  // NEW: Update Progress Bar
+  updateProgressUI(percent);
+  
+  let todoListHTML = '';
+  // ... rest of function
+}
+
+// NEW: Add this function at the end
+function updateProgressUI(percent) {
+    const bar = document.querySelector('.js-progress-bar');
+    const text = document.querySelector('.js-progress-text');
+    
+    if(bar) bar.style.width = `${percent}%`;
+    if(text) text.innerText = `${percent}%`;
+}
   
   todoList.forEach((todo, index) => {
     todoListHTML += `
