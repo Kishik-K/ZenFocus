@@ -206,3 +206,13 @@ input:focus {
 .todo-row:hover .delete-btn { 
     opacity: 1;  /* Show on hover */
 }
+
+/* PROGRESS BAR - NEW IN DAY 8 */
+.progress-section {
+    margin-bottom: 30px;
+    background: var(--card);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
