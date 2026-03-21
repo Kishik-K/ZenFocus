@@ -2,12 +2,11 @@
 
 A minimalist to-do list application built with vanilla JavaScript.
 
-## Day 7 Key Changes:
+##Day 9 Key Changes:
 
-✅ Data persists across browser sessions
+✅ Bulk remove completed tasks
 
-✅ Load from localStorage on startup
+✅ One-click cleanup
 
-✅ Save after every modification
+✅ Keeps list focused on active tasks
 
-✅ No more data loss!
