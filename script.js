@@ -112,6 +112,14 @@ function saveTodos() {
   localStorage.setItem('todos', JSON.stringify(todoList));
 }
 
+/**
+ * NEW: Clear all completed tasks
+ */
+function clearCompleted() {
+    todoList = todoList.filter(todo => !todo.completed);
+    renderTodoList();
+}
+
 document.querySelector('.js-input').addEventListener('keydown', (e) => {
   if (e.key === 'Enter') addTodo();
 });
