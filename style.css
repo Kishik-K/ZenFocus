@@ -245,3 +245,16 @@ input:focus {
     position: relative;
     box-shadow: 0 0 10px rgba(91, 140, 106, 0.3);
 }
+/* CLEAR BUTTON - NEW IN DAY 9 */
+.clear-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.clear-btn:hover {
+    color: var(--text);
+}
