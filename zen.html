@@ -14,11 +14,8 @@
             <h1>ZenFocus</h1>
             <p class="subtitle">Organize your thoughts, master your day.</p>
         </header>
-        <div class="list-header">
-            <h3>Your Tasks</h3>
-            <button class="clear-btn" onclick="clearCompleted()">Clear Completed</button>
-        </div>
-        <!-- NEW: Progress Section -->
+
+        <!-- Progress Section -->
         <div class="progress-section">
             <div class="progress-labels">
                 <span>Task Progress</span>
@@ -28,7 +25,7 @@
                 <div class="progress-bar-fill js-progress-bar"></div>
             </div>
         </div>
-        
+
         <div class="input-card">
             <input type="text" placeholder="What's the next task?" class="js-input">
             <input type="date" class="js-date-input">
@@ -39,6 +36,7 @@
 
         <div class="list-header">
             <h3>Your Tasks</h3>
+            <button class="clear-btn" onclick="clearCompleted()">Clear Completed</button>
         </div>
         
         <div class="js-todo-list todo-list-wrapper"></div>
