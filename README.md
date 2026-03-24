@@ -6,7 +6,11 @@ A minimalist to-do list application built with vanilla JavaScript.
 🎯 Today's Goals
 
  Add empty state message
+ 
  Refine box shadows
+ 
  Improve spacing
+ 
  Polish transitions
+ 
  Test edge cases
