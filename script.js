@@ -15,23 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function renderTodoList() {
   const container = document.querySelector('.js-todo-list');
-  let todoListHTML = '';
-
-  function renderTodoList() {
-  const container = document.querySelector('.js-todo-list');
   
-  // NEW: Calculate Progress
+  // Calculate Progress
   const totalTasks = todoList.length;
   const completedTasks = todoList.filter(t => t.completed).length;
   const percent = totalTasks === 0 ? 0 : Math.round((completedTasks / totalTasks) * 100);
-  
-  // NEW: Update Progress Bar
-  updateProgressUI(percent);
-  
-  let todoListHTML = '';
-  // ... rest of function
-}
 
+  // Update Progress Bar & Text
+  updateProgressUI(percent);
+
+  // NEW: Handle Empty State
+  if (totalTasks === 0) {
+    container.innerHTML = `
+      <div class="empty-state" style="text-align: center; padding: 50px 20px; color: #9c8f7a;">
+        <div class="emoji" style="font-size: 2.5rem; margin-bottom: 12px;">✨</div>
+        <p>All clear! Add a task to start your day.</p>
+      </div>
+    `;
+    saveTodos();
+    return;
+  }
+  
 // NEW: Add this function at the end
 function updateProgressUI(percent) {
     const bar = document.querySelector('.js-progress-bar');
