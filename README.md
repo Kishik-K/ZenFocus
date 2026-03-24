@@ -2,11 +2,11 @@
 
 A minimalist to-do list application built with vanilla JavaScript.
 
-##Day 9 Key Changes:
+## Day 10 - Empty State & UI Polish
+🎯 Today's Goals
 
-✅ Bulk remove completed tasks
-
-✅ One-click cleanup
-
-✅ Keeps list focused on active tasks
-
+ Add empty state message
+ Refine box shadows
+ Improve spacing
+ Polish transitions
+ Test edge cases
