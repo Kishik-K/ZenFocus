@@ -39,7 +39,17 @@
             <button class="clear-btn" onclick="clearCompleted()">Clear Completed</button>
         </div>
         
+        <!-- Active tasks -->
         <div class="js-todo-list todo-list-wrapper"></div>
+
+        <!-- ARCHIVE SECTION (NEW) -->
+        <div class="archive-section js-archive-section" style="display: none;">
+            <div class="archive-header" onclick="toggleArchive()">
+                <span class="archive-title">📦 Completed Archive (<span class="js-archive-count">0</span>)</span>
+                <span class="archive-toggle js-archive-toggle">▼</span>
+            </div>
+            <div class="js-archive-list archive-list"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
