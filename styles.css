@@ -1,0 +1,274 @@
+/* Custom properties for easy color management */
+:root {
+  --bg: #f8f6f2;
+  --card: #ffffff;
+  --text: #2c2416;
+  --muted: #8a8171;
+  --accent: #d48c5c;
+  --green: #5b8c6a;
+  --border: #e8e2d6;
+  --shadow: 0 10px 30px rgba(44, 36, 22, 0.05);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+header { margin-bottom: 30px; }
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+
+.subtitle { color: var(--muted); font-size: 1rem; }
+
+/* PROGRESS BAR */
+.progress-section {
+    margin-bottom: 30px;
+    background: var(--card);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Better Progress Bar Styling */
+.progress-bar-container {
+    height: 12px; /* Made slightly thicker for better visibility */
+    background: #e0d5c0; /* Darker than bg for depth */
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Adds depth */
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #5b8c6a, #8eb097);
+    border-radius: 20px;
+    
+    /* THE MAGIC: A longer duration with a Quintic ease-out */
+    transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+    
+    position: relative;
+    box-shadow: 0 0 10px rgba(91, 140, 106, 0.3); /* Soft glow */
+}
+
+/* Subtile Shimmer Effect */
+.progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    transform: translateX(-100%);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    100% { transform: translateX(100%); }
+}
+
+/* Smooth number transition */
+.js-progress-text {
+    font-variant-numeric: tabular-nums; /* Prevents numbers from jumping around */
+    transition: all 0.3s ease;
+}
+
+/* INPUT AREA */
+.input-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+input {
+  border: 1px solid transparent;
+  background: var(--bg);
+  padding: 12px;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+input[type="text"] { flex: 2; }
+input[type="date"] { flex: 1; font-size: 0.8rem; }
+input:focus { border-color: var(--accent); background: #fff; }
+
+.add-button {
+  background: var(--text);
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-button:hover { background: var(--accent); }
+
+/* TODO ITEMS */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 5px 15px;
+}
+
+.clear-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.todo-row {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.todo-row.completed {
+    opacity: 0.6;
+    background: transparent;
+}
+
+.todo-row.completed .todo-name {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.todo-row.completed .checkbox {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.todo-row.completed .checkbox::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+}
+
+.todo-info { flex: 1; }
+.todo-name { font-weight: 600; display: block; }
+.todo-date { font-size: 0.75rem; color: var(--muted); }
+
+.delete-btn {
+    opacity: 0;
+    background: none;
+    border: none;
+    color: #e57373;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.todo-row:hover .delete-btn { opacity: 1; }
+
+/* ERROR */
+.error-msg { color: var(--accent); font-size: 0.8rem; display: none; margin-bottom: 10px; }
+
+/* ARCHIVE SECTION */
+.archive-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px dashed var(--border);
+}
+
+.archive-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: rgba(138, 129, 113, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.archive-header:hover {
+  background: rgba(138, 129, 113, 0.15);
+}
+
+.archive-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.archive-toggle {
+  font-size: 0.75rem;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.archive-list {
+  margin-top: 10px;
+}
+
+.archive-item {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.archive-item:hover {
+  opacity: 0.7;
+}
