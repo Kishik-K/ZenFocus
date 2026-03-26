@@ -6,7 +6,7 @@
 (<img width="1919" height="915" alt="image" target=blank src="https://github.com/user-attachments/assets/d87d90d1-fd90-4b2f-9dea-94cc00f2eeba" />
 )
 
-🔗 **[Live Demo](#)** — https://kishik-k.github.io/ZenFocus/
+🔗 **[Live Demo](#)** target=blank — https://kishik-k.github.io/ZenFocus/
 
 ---
 
