@@ -2,7 +2,9 @@
 
 > A clean, minimal task management app built to help you organize your day with clarity and focus.
 
-![ZenFocus Preview]![privew-Image](image.png)
+![ZenFocus Preview]!
+(<img width="1919" height="915" alt="image" target=blank src="https://github.com/user-attachments/assets/d87d90d1-fd90-4b2f-9dea-94cc00f2eeba" />
+)
 
 🔗 **[Live Demo](#)** — https://kishik-k.github.io/ZenFocus/
 
