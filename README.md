@@ -79,7 +79,7 @@ ZenFocus/
 
 ---
 
-## Roadmap
+## Roadmap (future)
 
 - [ ] Drag to reorder tasks
 - [ ] Priority levels (low / medium / high)
